@@ -14,6 +14,8 @@ function LoginJisoo() {
     setPwValue(event.target.value);
   };
 
+  const loginBtn = !(idValue.includes('@') && pwValue.length >= 5);
+
   const navigate = useNavigate();
 
   const moveToMain = () => {
@@ -39,7 +41,11 @@ function LoginJisoo() {
             placeholder="비밀번호"
             onChange={saveUserPw}
           />
-          <button className="login_btn" onClick={moveToMain}>
+          <button
+            className="login_btn"
+            disabled={loginBtn}
+            onClick={moveToMain}
+          >
             로그인
           </button>
         </div>
