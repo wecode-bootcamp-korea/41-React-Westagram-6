@@ -1,0 +1,120 @@
+$basic-color: rgb(230, 230, 230);
+
+@mixin flexBundle($justifyContent, $alignItems) {
+  display: flex;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+}
+
+.feeds_container {
+  width: 40%;
+  margin-right: 10px;
+  padding: 5px 0;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid $basic-color;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 1343px) {
+  .feeds_container {
+    width: 50%;
+  }
+}
+
+.feeds_user_info,
+.feeds_count_like_user {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+}
+
+.user_name {
+  font-weight: bold;
+}
+
+.profile_img {
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+  border-radius: 100%;
+}
+
+.feeds_content_img {
+  width: 100%;
+}
+
+.feeds_icon_section {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+  margin-top: 5px;
+
+  .feeds_icon_section_left a {
+    margin-right: 10px;
+  }
+
+  img {
+    width: 24px;
+    height: 24px;
+  }
+
+  a {
+    margin-right: 5px;
+  }
+}
+
+.like_img {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+  border-radius: 100%;
+}
+
+.feeds_user_content,
+.comment,
+.created_at {
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.created_at,
+.user_follow {
+  color: gray;
+  font-size: 14px;
+}
+
+.comment_input {
+  width: 85%;
+  margin: 10px 10px;
+  padding: 0 5px;
+  border: none;
+}
+
+.feeds_comment_register_section {
+  position: relative;
+  margin-top: 15px;
+  border-top: 1px solid $basic-color;
+}
+
+.comment_btn_register {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: rgb(7, 24, 255);
+  background-color: white;
+  border: none;
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.6;
+  }
+}
+
+.delete {
+  position: relative;
+  left: 10px;
+  color: rgb(175, 175, 175);
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}

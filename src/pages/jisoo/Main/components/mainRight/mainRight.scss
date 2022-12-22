@@ -1,0 +1,164 @@
+$basic-color: rgb(230, 230, 230);
+
+@mixin flexBundle($justifyContent, $alignItems) {
+  display: flex;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+}
+
+.feeds_container_right {
+  width: 20%;
+  margin-left: 0;
+  padding: 20px 0 10px 0;
+  background-color: rgb(250, 250, 250);
+}
+
+@media screen and (max-width: 1343px) {
+  .feeds_container_right {
+    display: none;
+  }
+}
+
+.feeds_right_user_info {
+  display: flex;
+  align-items: center;
+}
+
+.right_profile_img {
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+  border-radius: 100%;
+}
+
+.user_under_name {
+  font-size: 12px;
+  color: $basic-color;
+}
+
+.feeds_right_story_section {
+  margin: 20px 0;
+  background-color: white;
+  border: 1px solid $basic-color;
+}
+
+.feeds_right_story_nav {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  margin: 10px;
+  padding: 0 10px;
+  background-color: white;
+}
+
+.feeds_right_category {
+  color: gray;
+}
+
+.feeds_right_view {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.user_profile_rectangle {
+  position: relative;
+  width: 46px;
+  height: 46px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  background: linear-gradient(to top right, yellow, pink);
+  border-radius: 100%;
+}
+
+.story_profile_img {
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+
+.feeds_right_story_user_list {
+  height: 180px;
+  overflow: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.feeds_right_user_info {
+  margin-left: 10px;
+}
+
+.user_last_visit {
+  font-size: 12px;
+  color: gray;
+}
+
+.feeds_right_follow_user_info {
+  @include flexBundle(space-between, center);
+  padding-left: 10px;
+}
+
+.user_follow_row {
+  padding-top: 5px;
+}
+
+.feeds_right_follow_section {
+  margin-top: 20px;
+  background-color: white;
+  border: 1px solid $basic-color;
+  margin-bottom: 30px;
+}
+
+.feeds_right_follow_nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 5px 10px 0px;
+  padding: 0 10px;
+}
+
+.follow_profile_img {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+
+.user_follow_name_section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.user_follow_btn {
+  color: cornflowerblue;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}
+
+footer {
+  ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+    font-size: 11px;
+    color: gray;
+  }
+}
+
+.footer_top {
+  margin-bottom: 20px;
+}
+
+.footer_instagram {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 11px;
+  color: gray;
+}
