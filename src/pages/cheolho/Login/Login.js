@@ -70,9 +70,11 @@ const Login = () => {
               <div className="button_box">
                 <button
                   type="button"
-                  className="btn"
+                  className={
+                    id.includes('@') && pw.length >= 5 ? 'btnOn' : 'btn'
+                  }
                   onClick={goToMain}
-                  disabled=""
+                  disabled={id.includes('@') && pw.length >= 5 ? false : true}
                 >
                   <span>로그인</span>
                 </button>
@@ -82,12 +84,6 @@ const Login = () => {
             <div className="password_forget">
               <a href className="page_move">
                 <span>비밀번호를 잊으셨나요?</span>
-                {
-                  //<Link to="/main">로그인</Link>}
-                  /*<button className="loginBtn" onClick={goToMain}>
-                      로그인
-                    </button>*/
-                }
               </a>
             </div>
           </div>
