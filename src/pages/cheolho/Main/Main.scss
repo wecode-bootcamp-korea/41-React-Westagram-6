@@ -354,9 +354,14 @@
       .btn {
         border: none;
 
-        span {
+        .spanSubmit {
           font-size: 15px;
           color: #bfdffd;
+        }
+
+        .spanSubmitOn {
+          font-size: 15px;
+          color: #1c7ed6;
         }
       }
     }

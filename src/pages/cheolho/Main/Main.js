@@ -1,8 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Main.scss';
 
 //jsx
 const Main = () => {
+  const [comment, setComment] = useState('');
+  const [commentArray, setCommentArray] = useState([]);
+
+  const handleCommentInput = event => {
+    setComment(event.target.value);
+  };
+
+  const onSubmit = event => {
+    event.preventDefault();
+    let copy = [...commentArray];
+    copy.push(comment);
+    setCommentArray(copy);
+    setComment('');
+  };
+
   return (
     <div className="Main">
       <meta charSet="UTF-8" />
@@ -162,26 +177,36 @@ const Main = () => {
                           </ul>
                           <div className="feed_time">
                             <p className="time">4시30분</p>
+                            {commentArray.map(function (a, i) {
+                              return <p>{commentArray[i]}</p>;
+                            })}
                           </div>
                         </div>
                       </div>
                     </div>
                     {/* comment form */}
-                    <form className="comments_form">
+                    <form className="comments_form" onSubmit={onSubmit}>
                       <div className="input_box">
                         <input
                           type="text"
                           placeholder="댓글달기..."
                           id="comment_input"
+                          value={comment}
+                          onChange={handleCommentInput}
                         />
                       </div>
                       <div className="button_box">
                         <button
                           type="button"
                           className="btn"
-                          disabled="disabled"
+                          onClick={onSubmit}
+                          disabled=""
                         >
-                          <span className>게시</span>
+                          <span
+                            className={comment ? 'spanSubmitOn' : 'spanSubmit'}
+                          >
+                            게시
+                          </span>
                         </button>
                       </div>
                     </form>
