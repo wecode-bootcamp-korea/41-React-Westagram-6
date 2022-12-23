@@ -1,0 +1,231 @@
+@import url(https://fonts.googleapis.com/css2?family=Lobster&display=swap);
+
+.main {
+  .nav {
+    border-bottom: 1px solid #e8e8e8;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .westaWrap {
+      .westaLogo {
+        width: 25px;
+      }
+
+      .westaLine {
+        width: 30px;
+      }
+
+      .logo {
+        font-family: 'Lobster', cursive;
+        font-size: 30px;
+      }
+    }
+
+    .inputSearch {
+      height: 20px;
+      text-align: center;
+    }
+
+    .navImgWrap {
+      .explore {
+        width: 30px;
+        margin-right: 20px;
+      }
+
+      .heart {
+        width: 30px;
+        margin-right: 20px;
+      }
+
+      .profile {
+        width: 30px;
+      }
+    }
+  }
+
+  .mainContainer {
+    display: flex;
+    height: 500px;
+    padding-left: 50px;
+    background-color: #fafafa;
+
+    .feed {
+      margin-left: 30px;
+      width: 750px;
+      height: 100%;
+
+      .article {
+        margin-top: 30px;
+        height: 100%;
+
+        .user {
+          display: flex;
+          align-items: center;
+          background-color: white;
+          border: 1px solid #e6e6e6;
+          padding: 10px;
+
+          .userImg {
+            width: 30px;
+            height: 30px;
+            margin-right: 15px;
+            border-radius: 100%;
+          }
+
+          .infoBox {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+
+            .title {
+              font-weight: bold;
+            }
+
+            .subTitle {
+              opacity: 0.4;
+            }
+          }
+
+          .dotImg {
+            width: 15px;
+          }
+        }
+        .feedContainer {
+          height: 100%;
+
+          .feedImg {
+            width: 100%;
+            height: 70%;
+          }
+          .feedWrap {
+            border: 1px solid #e6e6e6;
+            background-color: white;
+
+            .feedSubImg {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+
+              .feedHeart,
+              .feedComment,
+              .feedUpload {
+                width: 30px;
+                margin-top: 5px;
+                padding-left: 10px;
+              }
+              .feedBookmark {
+                width: 25px;
+                margin-left: auto;
+                margin-right: 10px;
+                margin-top: 5px;
+              }
+            }
+            .contents {
+              flex-direction: column;
+              margin-left: 10px;
+              margin-right: 10px;
+              margin-top: 12px;
+
+              .contentImg {
+                width: 18px;
+                height: 18px;
+                border-radius: 100%;
+              }
+
+              .spanBold {
+                width: 100%;
+                .spBold1 {
+                  font-weight: bold;
+                }
+                .spBold2 {
+                  font-weight: bold;
+                }
+              }
+
+              .contentSpanWrap {
+                margin-top: 5px;
+
+                .contentSpanNBold {
+                  .contentBold {
+                    margin-right: 3px;
+                    font-weight: bold;
+                  }
+                }
+              }
+
+              .comment {
+                display: flex;
+                justify-content: space-between;
+                border-top: 1px solid #e6e6e6;
+                margin-top: 10px;
+
+                .commentInput {
+                  width: 90%;
+                  margin-top: 7px;
+                  margin-bottom: 7px;
+                  border: none;
+                }
+
+                .registerSpan {
+                  color: #c4e1fb;
+                  padding-top: 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .mainRight {
+      width: 300px;
+
+      .user {
+        display: flex;
+        align-items: center;
+        background-color: white;
+        border: 1px solid #e6e6e6;
+        padding: 10px;
+
+        .userImg {
+          width: 30px;
+          height: 30px;
+          margin-right: 15px;
+          border-radius: 100%;
+        }
+
+        .infoBox {
+          display: flex;
+          width: 100%;
+          flex-direction: column;
+
+          .title {
+            font-weight: bold;
+          }
+
+          .subTitle {
+            opacity: 0.4;
+          }
+        }
+      }
+
+      .storyWrap {
+        .storySpan {
+          display: flex;
+          justify-content: space-between;
+          padding: 10px;
+
+          .story {
+            opacity: 0.4;
+          }
+
+          .viewAll {
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+}
