@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Main.scss';
+import ReceiveComment from './components/ReceiveComment';
 
 //jsx
 const Main = () => {
@@ -17,6 +18,12 @@ const Main = () => {
     setCommentArray(copy);
     setComment('');
   };
+
+  function CommentOutput({ commentArray }) {
+    return commentArray.map(function (a, i) {
+      return <p>{commentArray[i]}</p>;
+    });
+  }
 
   return (
     <div className="Main">
@@ -177,9 +184,7 @@ const Main = () => {
                           </ul>
                           <div className="feed_time">
                             <p className="time">4시30분</p>
-                            {commentArray.map(function (a, i) {
-                              return <p>{commentArray[i]}</p>;
-                            })}
+                            <CommentOutput commentArray={commentArray} />
                           </div>
                         </div>
                       </div>
@@ -187,12 +192,9 @@ const Main = () => {
                     {/* comment form */}
                     <form className="comments_form" onSubmit={onSubmit}>
                       <div className="input_box">
-                        <input
-                          type="text"
-                          placeholder="댓글달기..."
-                          id="comment_input"
-                          value={comment}
-                          onChange={handleCommentInput}
+                        <ReceiveComment
+                          comment={comment}
+                          handleCommentInput={handleCommentInput}
                         />
                       </div>
                       <div className="button_box">
