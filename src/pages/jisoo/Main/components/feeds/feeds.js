@@ -1,16 +1,15 @@
 import { useState } from 'react';
+import Comments from './../comments/comments';
 import './feeds.scss';
 
 function Feeds() {
   const [commentList, setCommentList] = useState([]);
   const [content, setContent] = useState('');
 
-  // comment = input 값
   const saveComment = e => {
     setContent(e.target.value);
   };
 
-  // 버튼을 눌렀을 때 추가됐으면 하는 내용
   const pushCommentList = () => {
     setCommentList([
       ...commentList,
@@ -22,11 +21,12 @@ function Feeds() {
     ]);
     setContent('');
   };
-  // const commentList = [
-  //   { user: 'love_penguin', content: '감기 조심해!!' },
-  //   { user: 'love_penguin2', content: '오늘 진짜 너무 춥다 ㅠㅠ' },
-  //   { user: 'love_penguin3', content: '내일이 월요일이라니 끔찍해' },
-  // ];
+
+  const keyPressEnter = e => {
+    if (e.key === 'Enter') {
+      pushCommentList();
+    }
+  };
 
   return (
     <div className="feedsWrapper">
@@ -103,16 +103,10 @@ function Feeds() {
                 날이 많이 추워 감기 조심해 !!
               </span>
             </div>
-            {/* 댓글이 추가될 부분 */}
-            {commentList.map((el, i) => {
+            {commentList.map(comment => {
               return (
                 <div className="comment">
-                  <span key={el.id} className="userName">
-                    {el.user}
-                  </span>
-                  <span key={i} className="comment_content">
-                    {el.content}
-                  </span>
+                  <Comments comment={comment} />
                 </div>
               );
             })}
@@ -124,6 +118,7 @@ function Feeds() {
               placeholder="댓글 달기..."
               onChange={saveComment}
               value={content}
+              onKeyPress={keyPressEnter}
             />
             <button className="comment_btn_register" onClick={pushCommentList}>
               게시
