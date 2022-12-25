@@ -19,9 +19,9 @@ function LoginJihwan() {
     setPw(e.target.value);
     console.log(e.target.value);
   };
-  //const isValid = id.includes('@' && '.') && pw.length > 4 ? false : true;
+  const isValid = id.includes('@' && '.') && pw.length > 4 ? false : true;
 
-  //const activeBtn = isValid === false ? 'activeBtn' : 'loginBtn';
+  const activeBtn = isValid === false ? 'activeBtn' : 'loginBtn';
 
   return (
     <div className="login">
@@ -42,7 +42,7 @@ function LoginJihwan() {
             placeholder="비밀번호"
             onChange={saveUserPw}
           />
-          <button className="loginBtn" onClick={toMain}>
+          <button className={activeBtn} onClick={toMain} disabled={isValid}>
             로그인
           </button>
         </div>
