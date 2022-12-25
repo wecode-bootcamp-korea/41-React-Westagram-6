@@ -17,7 +17,7 @@ function MainRight() {
       <div className="feeds_right_story_section">
         <div className="feeds_right_story_nav">
           <span className="feeds_right_category">스토리</span>
-          <a href="#" className="link_to_view">
+          <a href="#x" className="link_to_view">
             <span className="feeds_right_view">모두 보기</span>
           </a>
         </div>
@@ -92,7 +92,7 @@ function MainRight() {
       <div className="feeds_right_follow_section">
         <div className="feeds_right_follow_nav">
           <span className="feeds_right_category">회원님을 위한 추천</span>
-          <a href="#" className="link_to_view">
+          <a href="#x" className="link_to_view">
             <span className="feeds_right_view">모두 보기</span>
           </a>
         </div>
@@ -147,48 +147,48 @@ function MainRight() {
       </div>
       <footer>
         <ul className="footer_top">
-          <a href="">
+          <a href="#x">
             <li>instagram 정보</li>
           </a>
           ・
-          <a href="">
+          <a href="#x">
             <li>지원</li>
           </a>
           ・
-          <a href="">
+          <a href="#x">
             <li>홍보 센터</li>
           </a>
           ・
-          <a href="">
+          <a href="#x">
             <li>API</li>
           </a>
           ・
-          <a href="">
+          <a href="#x">
             <li>채용 정보</li>
           </a>
         </ul>
         <ul className="footer_bottom">
-          <a href="">
+          <a href="#x">
             <li>개인정보처리방침</li>
           </a>
           ・
-          <a href="">
+          <a href="#x">
             <li>약관</li>
           </a>
           ・
-          <a href="">
+          <a href="#x">
             <li>디렉터리</li>
           </a>
           ・
-          <a href="">
+          <a href="#x">
             <li>프로필</li>
           </a>
           ・
-          <a href="">
+          <a href="#x">
             <li>해시태그</li>
           </a>
           ・
-          <a href="">
+          <a href="#x">
             <li>언어</li>
           </a>
         </ul>

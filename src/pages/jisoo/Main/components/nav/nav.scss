@@ -6,11 +6,8 @@ $basic-color: rgb(230, 230, 230);
   align-items: $alignItems;
 }
 
-nav_bar {
+.nav {
   @include flexBundle(space-around, center);
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   width: 100%;
   margin-top: 10px;
   padding: 0 20px 10px 0;

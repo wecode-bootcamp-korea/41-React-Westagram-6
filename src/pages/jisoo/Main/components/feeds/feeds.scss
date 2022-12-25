@@ -6,7 +6,7 @@ $basic-color: rgb(230, 230, 230);
   align-items: $alignItems;
 }
 
-.feeds_container {
+.feedsWrapper {
   width: 40%;
   margin-right: 10px;
   padding: 5px 0;
@@ -19,16 +19,18 @@ $basic-color: rgb(230, 230, 230);
   .feeds_container {
     width: 50%;
   }
+
+  //
 }
 
-.feeds_user_info,
+.userInfo,
 .feeds_count_like_user {
   display: flex;
   align-items: center;
   padding: 10px 15px;
 }
 
-.user_name {
+.userName {
   font-weight: bold;
 }
 
@@ -43,13 +45,13 @@ $basic-color: rgb(230, 230, 230);
   width: 100%;
 }
 
-.feeds_icon_section {
+.icon_section {
   display: flex;
   justify-content: space-between;
   padding-left: 10px;
   margin-top: 5px;
 
-  .feeds_icon_section_left a {
+  .icon_section_left a {
     margin-right: 10px;
   }
 
@@ -71,16 +73,18 @@ $basic-color: rgb(230, 230, 230);
 }
 
 .feeds_user_content,
-.comment,
-.created_at {
+.comment {
   margin-left: 10px;
   margin-top: 5px;
 }
 
-.created_at,
 .user_follow {
   color: gray;
   font-size: 14px;
+}
+
+.comment_content {
+  margin-left: 5px;
 }
 
 .comment_input {

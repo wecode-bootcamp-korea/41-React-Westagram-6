@@ -2,7 +2,7 @@ import './nav.scss';
 
 function Nav() {
   return (
-    <nav_bar>
+    <div className="nav">
       <div className="logo_section">
         <img
           alt="인스타그램_로고"
@@ -61,7 +61,7 @@ function Nav() {
           </div>
         </a>
       </div>
-    </nav_bar>
+    </div>
   );
 }
 
