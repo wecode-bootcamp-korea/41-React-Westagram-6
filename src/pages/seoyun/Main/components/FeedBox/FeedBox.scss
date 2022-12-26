@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
+@import './src/styles/seoyun/common.scss';
+@import './src/styles/seoyun/variables.scss';
+
+main {
+  background-color: #fafafa;
+
+  .feedsContainer {
+    @include border1px(#dbdbdb, 3px);
+    width: 470px;
+    max-height: 940px;
+    background-color: white;
+    margin-top: 130px;
+
+    .profileBox {
+      width: 470px;
+      height: 53px;
+      @include flex(space-between, center);
+
+      .profile {
+        display: flex;
+
+        img {
+          @include widthHeight(33px, 33px);
+          @include border1px($borderColor, 50%);
+          margin: auto 10px auto 15px;
+        }
+
+        .idBox {
+          font-size: 14px;
+          font-weight: bold;
+          @include flexCenter;
+        }
+      }
+
+      .moreOptions {
+        margin-right: 15px;
+
+        .ellipsis {
+          color: #262626;
+        }
+      }
+    }
+
+    .feedPic {
+      max-width: 468px;
+      height: 470px;
+      overflow: hidden;
+      position: relative;
+
+      img {
+        position: absolute;
+        width: 470px;
+        margin-top: -37%;
+      }
+    }
+
+    .options {
+      position: relative;
+
+      .likeHeart {
+        @include fontStyle(24px, black, 13px 0px 0px 13px);
+
+        &.Activate {
+          @include fontStyle(24px, #ed4956, 13px 0px 0px 13px);
+        }
+      }
+
+      .comment {
+        @include fontStyle(24px, null, 0px 0px 0px 13px);
+      }
+
+      .arrowup {
+        @include fontStyle(24px, null, 0px 0px 0px 13px);
+      }
+
+      .bookmark {
+        @include fontStyle(24px, null, 13px 13px 0px 0px);
+        position: absolute;
+        right: 0px;
+      }
+    }
+
+    .liked {
+      @include flex(null, center);
+      font-size: 14px;
+
+      img {
+        @include widthHeight(24px, 24px);
+        @include border1px($borderColor, 50%);
+        margin: 10px 5px 10px 13px;
+      }
+    }
+
+    .feedContent {
+      font-size: 14px;
+      display: flex;
+
+      .feedContent_MyId {
+        font-weight: bold;
+        margin-left: 13px;
+      }
+
+      .feedContent_MyWords {
+        margin-left: 5px;
+      }
+    }
+
+    .moreComments {
+      @include fontStyle(14px, #8e8e8e, 10px 0px 10px 13px);
+    }
+
+    .commentBox {
+      .comment {
+        margin: 0px 0px 1px 0px;
+        @include flex(space-between, null);
+
+        .commentLineLeft {
+          .commentId {
+            @include fontStyle(13px, null, 0px 0px 0px 13px);
+            font-weight: bold;
+          }
+
+          .commentContent {
+            @include fontStyle(14px, null, 0px 0px 0px 5px);
+          }
+        }
+
+        .commentLineRight {
+          margin-right: 13px;
+
+          button:hover {
+            @include buttonPointer;
+          }
+
+          .heartButton {
+            @include transparent;
+            @include fontStyle(14px, black, 0px 15px 0px 0px);
+
+            &.smallHeart .Activate {
+              @include fontStyle(14px, #ed4956, 0px 15px 0px 0px);
+            }
+          }
+
+          .xmarkButton {
+            @include transparent;
+          }
+        }
+      }
+    }
+
+    .postUploadTime {
+      @include fontStyle(10px, #8e8e8e, 10px 0px 10px 13px);
+    }
+
+    .writeComments {
+      @include flex(space-between, null);
+      border-top: 1px solid #efefef;
+      padding: 15px;
+
+      .commentInput {
+        border: none;
+        width: 390px;
+      }
+
+      .submitBtn {
+        @include transparent;
+        font-weight: bold;
+        color: #b4dcff;
+      }
+
+      button:hover {
+        @include buttonPointer;
+      }
+    }
+  }
+}

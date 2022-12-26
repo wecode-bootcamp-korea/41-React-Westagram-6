@@ -1,0 +1,69 @@
+@import './src/styles/seoyun/common.scss';
+@import './src/styles/seoyun/variables.scss';
+
+body {
+  @include flexAlignCenter;
+  background-color: #fafafa;
+}
+
+.container {
+  @include widthHeight(350px, 430px);
+  @include border1px(#dbdbdb, null);
+  @include flexAlignCenter;
+  background-color: white;
+  margin: 150px auto 10px auto;
+
+  .header {
+    font-family: 'Lobster', cursive;
+    font-family: 'Lobster Two', cursive;
+    font-size: 40px;
+    margin: 50px 0 50px 0;
+  }
+
+  .idBox,
+  .pwBox {
+    @include widthHeight(266px, 35px);
+    @include border1px(#dbdbdb, 3px);
+    @include fontStyle(12px, null, 3px);
+    background-color: #fafafa;
+    text-indent: 7px;
+  }
+
+  button {
+    @include widthHeight(272px, 30px);
+    @include fontStyle(13px, #ffffff, 15px);
+    border: none;
+    border-radius: 8px;
+    background-color: #67b6fa;
+    cursor: pointer;
+
+    &.Activate {
+      background-color: #0095f6;
+    }
+  }
+
+  p {
+    font-size: 12px;
+    color: #01376a;
+    text-decoration: none;
+  }
+
+  .findPW {
+    margin: 100px 0 0 0;
+  }
+}
+
+.signUpBox {
+  @include widthHeight(350px, 70px);
+  @include border1px(#dbdbdb, null);
+  @include flexCenter;
+  @include fontStyle(14px, null, null);
+  background-color: white;
+}
+
+.signUp {
+  @include fontStyle(14px, #0095f6, null);
+  @include transparent;
+  @include buttonPointer;
+  font-weight: bold;
+}

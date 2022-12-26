@@ -1,0 +1,6 @@
+@import './src/styles/seoyun/common.scss';
+@import './src/styles/seoyun/variables.scss';
+
+.mainWrapper {
+  @include flex(center, null);
+}
