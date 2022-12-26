@@ -168,9 +168,17 @@
                   border: none;
                 }
 
-                .registerSpan {
+                .registerBtn {
+                  background-color: white;
                   color: #c4e1fb;
-                  padding-top: 10px;
+                  border: none;
+                }
+                .registerBtnActive {
+                  background-color: skyblue;
+                  color: white;
+                  font-weight: bold;
+                  border: none;
+                  cursor: pointer;
                 }
               }
             }

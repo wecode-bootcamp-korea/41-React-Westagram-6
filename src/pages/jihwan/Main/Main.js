@@ -1,7 +1,31 @@
-import React from 'react';
+import { useState, React } from 'react';
 import './Main.scss';
 
 const Main = () => {
+  const [comments, setComments] = useState([]);
+
+  const [commentMsg, setCommentMsg] = useState('');
+
+  const handleInputComment = e => {
+    setCommentMsg(e.target.value);
+    console.log(e.target.value);
+  };
+
+  const handleCommentSubmit = e => {
+    e.preventDefault();
+
+    if (commentMsg === '') return alert('댓글 내용을 입력해주세요');
+
+    setComments(prev => [...prev, commentMsg]);
+    return setCommentMsg('');
+  };
+
+  let activeSubmit = () => {
+    if (commentMsg === '') return true;
+  };
+
+  let registerBtnOn = activeSubmit() ? 'registerBtn' : 'registerBtnActive';
+
   return (
     <section className="main">
       <nav className="nav">
@@ -96,18 +120,35 @@ const Main = () => {
                     <span className="spBold2">외 11명</span>이 좋아합니다
                   </span>
                   <div className="contentSpanWrap">
-                    <span className="contentSpanNBold">
-                      <span className="contentBold">ji</span>qweqwe...
-                    </span>
+                    <ul>
+                      {comments.map(comment => {
+                        return (
+                          <li>
+                            {}
+                            {comment}
+                          </li>
+                        );
+                      })}
+                    </ul>
                   </div>
-                  <div className="comment">
-                    <input
-                      className="commentInput"
-                      type="text"
-                      placeholder="댓글 달기..."
-                    />
-                    <span className="registerSpan">게시</span>
-                  </div>
+                  <form onSubmit={handleCommentSubmit}>
+                    <div className="comment">
+                      <input
+                        onChange={handleInputComment}
+                        value={commentMsg}
+                        className="commentInput"
+                        type="text"
+                        placeholder="댓글 달기..."
+                      />
+                      <button
+                        type="submit"
+                        className={registerBtnOn}
+                        onClick={handleCommentSubmit}
+                      >
+                        게시
+                      </button>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>

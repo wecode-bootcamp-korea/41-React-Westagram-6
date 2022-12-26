@@ -9,18 +9,17 @@ function LoginJihwan() {
   };
 
   const [id, setId] = useState('');
-  const [pw, setPw] = useState('');
+  const [password, setPassword] = useState('');
 
   const saveUserId = e => {
     setId(e.target.value);
     console.log(e.target.value);
   };
   const saveUserPw = e => {
-    setPw(e.target.value);
+    setPassword(e.target.value);
     console.log(e.target.value);
   };
-  const isValid = id.includes('@' && '.') && pw.length > 4 ? false : true;
-
+  const isValid = id.includes('@' && '.') && password.length > 4 ? false : true;
   const activeBtn = isValid === false ? 'activeBtn' : 'loginBtn';
 
   return (
@@ -29,7 +28,7 @@ function LoginJihwan() {
         <header>
           <h1>Westagram</h1>
         </header>
-        <div className="inputWrap">
+        <form className="inputWrap">
           <input
             className="loginId"
             type="text"
@@ -45,7 +44,7 @@ function LoginJihwan() {
           <button className={activeBtn} onClick={toMain} disabled={isValid}>
             로그인
           </button>
-        </div>
+        </form>
         <div className="forgotPw">
           <a href="#">비밀번호를 잊으셨나요?</a>
         </div>
