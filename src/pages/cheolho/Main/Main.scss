@@ -418,13 +418,11 @@
 
   /* footer */
   .footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 10px;
+    color: #adb5bd;
 
     span {
-      font-size: 18px;
+      font-size: 14px;
       line-height: 1.4;
     }
   }

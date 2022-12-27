@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Main.scss';
 import ReceiveComment from './components/ReceiveComment';
+import { ASIDE_UI } from './components/AsideUi';
 
 //jsx
 const Main = () => {
@@ -362,12 +363,13 @@ const Main = () => {
               {/* //aside */}
               {/* footer */}
               <footer className="footer">
-                <a
-                  href="https://www.flaticon.com/free-icons/user"
-                  title="user icons"
-                >
-                  User icons created by Freepik - Flaticon
-                </a>
+                {
+                  <ul>
+                    {ASIDE_UI.map(info => (
+                      <span key={info.id}>{info.text}</span>
+                    ))}
+                  </ul>
+                }
               </footer>
               {/* //footer */}
             </div>
