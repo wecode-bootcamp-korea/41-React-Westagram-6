@@ -1,12 +1,8 @@
-const Comments = props => {
+const Comments = ({ comment: { user, content } }) => {
   return (
     <>
-      <span key={props.comment.id} className="userName">
-        {props.comment.user}
-      </span>
-      <span key={props.comment.id} className="comment_content">
-        {props.comment.content}
-      </span>
+      <span className="user_name">{user}</span>
+      <span className="comment_content">{content}</span>
     </>
   );
 };

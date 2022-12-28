@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import './Login.scss';
 
 function LoginJisoo() {
@@ -23,32 +23,36 @@ function LoginJisoo() {
   };
 
   return (
-    <div className="loginWrapper">
+    <div className="login_wrapper">
       <div className="container">
-        <div className="logoSection">
-          <h1 className="logoText">Westagram</h1>
+        <div className="logo_section">
+          <h1 className="logo_text">Westagram</h1>
         </div>
-        <div className="loginSection">
+        <div className="login_section">
           <input
             type="text"
-            id="idInput"
+            id="id_input"
             placeholder="전화번호, 사용자 이름 또는 이메일"
             onChange={saveUserId}
           />
           <input
             type="password"
-            id="pwInput"
+            id="pw_input"
             placeholder="비밀번호"
             onChange={saveUserPw}
           />
-          <button className="loginBtn" disabled={loginBtn} onClick={moveToMain}>
+          <button
+            className="login_btn"
+            disabled={loginBtn}
+            onClick={moveToMain}
+          >
             로그인
           </button>
         </div>
-        <div className="forgetSection">
-          <a className="moveToFindPw" href="#x">
-            <p className="forgetPw">비밀번호를 잊으셨나요?</p>
-          </a>
+        <div className="forget_section">
+          <Link to="/">
+            <p className="forget_pw">비밀번호를 잊으셨나요?</p>
+          </Link>
         </div>
       </div>
     </div>
