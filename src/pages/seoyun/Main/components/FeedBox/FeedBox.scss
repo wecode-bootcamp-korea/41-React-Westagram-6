@@ -133,12 +133,12 @@ main {
             @include buttonPointer;
           }
 
-          .heartButton {
-            @include transparent;
+          .smallHeart {
             @include fontStyle(14px, black, 0px 15px 0px 0px);
+            @include buttonPointer;
 
-            &.smallHeart .Activate {
-              @include fontStyle(14px, #ed4956, 0px 15px 0px 0px);
+            &.Activate {
+              color: #ed4956;
             }
           }
 

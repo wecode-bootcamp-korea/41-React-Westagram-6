@@ -13,20 +13,28 @@ import {
 function FeedBox() {
   let [countLike, setPlusLike] = useState(507);
   let [likeHeart, setLikeHeart] = useState(false);
-  let [faHeartBlack, setfaHeart] = useState(faHeart);
 
   let [smallHeart, setSmallHeart] = useState(false);
-  let [faHeartComment, setfaHeartComment] = useState(faHeart);
+
+  let [commentObj, setCommentObj] = useState([
+    {
+      username: 'phdjay',
+      content: 'beautiful work',
+    },
+    {
+      username: 'ch.w.ch',
+      content: 'wow',
+    },
+  ]);
+  let [commentBoxValue, setCommentBoxValue] = useState('');
 
   const pressHeart = () => {
     setLikeHeart(!likeHeart);
     likeHeart ? setPlusLike(countLike - 1) : setPlusLike(countLike + 1);
-    setfaHeart(faHeart);
   };
 
   const pressCommentHeart = () => {
     setSmallHeart(!smallHeart);
-    setfaHeartComment(faHeart);
   };
 
   const redHeart = likeHeart ? ' Activate' : ' Deactivate';
@@ -57,7 +65,7 @@ function FeedBox() {
         </div>
         <div className="options">
           <FontAwesomeIcon
-            icon={faHeartBlack}
+            icon={faHeart}
             className={'likeHeart' + redHeart}
             onClick={pressHeart}
           />
@@ -82,25 +90,33 @@ function FeedBox() {
         </div>
         <div className="moreComments">댓글 10개 모두 보기</div>
         <div className="commentBox">
-          <div className="comment">
-            <div className="commentLineLeft">
-              <span className="commentId">phdjay</span>
-              <span className="commentContent">beautiful work</span>
-            </div>
-            <div className="commentLineRight">
-              <button className="heartButton">
-                <FontAwesomeIcon
-                  icon={faHeartComment}
-                  button
-                  className={'smallHeart' + smallRedHeart}
-                  onClick={pressCommentHeart}
-                />
-              </button>
-              <button className="xmarkButton">
-                <FontAwesomeIcon icon={faXmark} className="xmark" />
-              </button>
-            </div>
-          </div>
+          {commentObj.map(function (a, i) {
+            return (
+              <div className="comment" key={i}>
+                <div className="commentLineLeft">
+                  <span className="commentId">{a.username}</span>
+                  <span className="commentContent">{a.content}</span>
+                </div>
+                <div className="commentLineRight">
+                  <FontAwesomeIcon
+                    icon={faHeart}
+                    className={'smallHeart' + smallRedHeart}
+                    onClick={pressCommentHeart}
+                  />
+                  <button
+                    className="xmarkButton"
+                    onClick={() => {
+                      let copy = [...commentObj];
+                      copy.splice(i, 1);
+                      setCommentObj(copy);
+                    }}
+                  >
+                    <FontAwesomeIcon icon={faXmark} className="xmark" />
+                  </button>
+                </div>
+              </div>
+            );
+          })}
         </div>
         <div className="postUploadTime">2시간 전</div>
         <div className="writeComments">
@@ -108,8 +124,25 @@ function FeedBox() {
             className="commentInput"
             type="text"
             placeholder="댓글 달기 ..."
+            value={commentBoxValue}
+            onChange={e => {
+              setCommentBoxValue(e.target.value);
+            }}
           />
-          <button className="submitBtn">게시</button>
+          <button
+            className="submitBtn"
+            onClick={() => {
+              let copy = [...commentObj];
+              copy.push({
+                username: 'marshmellowthecat',
+                content: commentBoxValue,
+              });
+              setCommentObj(copy);
+              setCommentBoxValue('');
+            }}
+          >
+            게시
+          </button>
         </div>
       </div>
     </main>
