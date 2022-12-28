@@ -3,18 +3,24 @@ import { useNavigate, Link } from 'react-router-dom';
 import './Login.scss';
 
 function LoginJisoo() {
-  const [idValue, setIdValue] = useState('');
-  const [pwValue, setPwValue] = useState('');
+  const [inputValues, setInputValues] = useState({
+    id: '',
+    pw: '',
+  });
 
-  const saveUserId = event => {
-    setIdValue(event.target.value);
+  const handleId = event => {
+    const value = event.target.value;
+    setInputValues({ ...inputValues, id: value });
   };
 
-  const saveUserPw = event => {
-    setPwValue(event.target.value);
+  const handlePw = event => {
+    const { value } = event.target;
+    setInputValues({ ...inputValues, pw: value });
   };
 
-  const loginBtn = !(idValue.includes('@') && pwValue.length >= 5);
+  const { id, pw } = inputValues;
+
+  const loginBtn = !(id.includes('@') && pw.length >= 5);
 
   const navigate = useNavigate();
 
@@ -33,13 +39,13 @@ function LoginJisoo() {
             type="text"
             id="id_input"
             placeholder="전화번호, 사용자 이름 또는 이메일"
-            onChange={saveUserId}
+            onChange={handleId}
           />
           <input
             type="password"
             id="pw_input"
             placeholder="비밀번호"
-            onChange={saveUserPw}
+            onChange={handlePw}
           />
           <button
             className="login_btn"

@@ -1,15 +1,9 @@
-$basic-color: rgb(230, 230, 230);
-
-@mixin flexBundle($justifyContent, $alignItems) {
-  display: flex;
-  justify-content: $justifyContent;
-  align-items: $alignItems;
-}
+@import './../../../../../styles/mixin_jisoo.scss';
 
 .feeds_wrapper {
+  width: 40%;
   margin-right: 10px;
   padding: 5px 0;
-  width: 40%;
   background-color: rgb(255, 255, 255);
   border: 1px solid $basic-color;
   border-radius: 10px;
@@ -22,9 +16,9 @@ $basic-color: rgb(230, 230, 230);
   }
 
   .profile_img {
-    margin-right: 5px;
     width: 40px;
     height: 40px;
+    margin-right: 5px;
     border-radius: 100%;
   }
 
@@ -39,9 +33,9 @@ $basic-color: rgb(230, 230, 230);
     padding-left: 10px;
 
     img {
-      margin-right: 10px;
       width: 24px;
       height: 24px;
+      margin-right: 10px;
     }
   }
 

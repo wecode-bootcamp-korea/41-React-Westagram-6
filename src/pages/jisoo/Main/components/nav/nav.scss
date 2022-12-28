@@ -1,10 +1,4 @@
-$basic-color: rgb(230, 230, 230);
-
-@mixin flexBundle($justifyContent, $alignItems) {
-  display: flex;
-  justify-content: $justifyContent;
-  align-items: $alignItems;
-}
+@import './../../../../../styles/mixin_jisoo.scss';
 
 .nav {
   @include flexBundle(space-around, center);
@@ -78,6 +72,7 @@ $basic-color: rgb(230, 230, 230);
 .logo {
   font-family: 'Lobster', cursive;
   font-size: 30px;
+  font-weight: bold;
 }
 
 .search_section {

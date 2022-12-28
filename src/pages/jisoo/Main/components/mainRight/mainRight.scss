@@ -1,10 +1,4 @@
-$basic-color: rgb(230, 230, 230);
-
-@mixin flexBundle($justifyContent, $alignItems) {
-  display: flex;
-  justify-content: $justifyContent;
-  align-items: $alignItems;
-}
+@import './../../../../../styles/mixin_jisoo.scss';
 
 .main_right_wrapper {
   width: 20%;
@@ -105,11 +99,10 @@ $basic-color: rgb(230, 230, 230);
     padding-top: 5px;
   }
 
-  .ollow_section {
-    margin-top: 20px;
+  .follow_section {
+    margin: 20px 0;
     background-color: white;
     border: 1px solid $basic-color;
-    margin-bottom: 30px;
   }
 
   .follow_section {
@@ -135,9 +128,9 @@ $basic-color: rgb(230, 230, 230);
   .user_follow_name_section {
     display: flex;
     justify-content: space-between;
+    width: 100%;
     margin-bottom: 10px;
     padding: 0 15px;
-    width: 100%;
   }
 
   .user_follow {
