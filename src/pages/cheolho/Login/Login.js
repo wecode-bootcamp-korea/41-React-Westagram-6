@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { scryRenderedComponentsWithType } from 'react-dom/test-utils';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-import '../../../styles/common.scss';
-import '../../../styles/reset.scss';
+import '../../../styles/seoyun/common.scss';
+import '../../../styles/seoyun/reset.scss';
 import './Login.scss';
 
 //jsx

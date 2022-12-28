@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Main.scss';
 import ReceiveComment from './components/ReceiveComment';
 import { ASIDE_UI } from './components/AsideUi';
+import Nav from '../../../components/Nav';
 
 //jsx
 const Main = () => {
@@ -36,51 +37,10 @@ const Main = () => {
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
       />
+
       <div className="wrap">
         {/* header */}
-        <header className="header">
-          <div className="header_wrap">
-            <div className="inner">
-              <h1 className="logo">
-                <img
-                  src="images/cheolho/instagram.png"
-                  alt="instagram"
-                  className="instagram_img"
-                />
-                <div className="vl" />
-                <a href="login.html">
-                  <img
-                    src="images/cheolho/1600px-Instagram_logo.svg.png"
-                    alt="main_logo"
-                    className="instagram_logo"
-                  />
-                </a>
-              </h1>
-              <div className="input_box">
-                <input type="text" placeholder="검색" id="search" />
-              </div>
-              <nav className="nav">
-                <ul className="link_list">
-                  <li>
-                    <a href>
-                      <i className="fas fa-compass" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href>
-                      <i className="fas fa-heart" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href>
-                      <i className="fas fa-user-circle" />
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-        </header>
+        <Nav />
         {/* //header */}
         {/* main */}
         <div className="main">
