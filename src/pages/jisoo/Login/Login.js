@@ -9,8 +9,8 @@ function LoginJisoo() {
   });
 
   const handleValue = event => {
-    const { value } = event.target;
-    setInputValues({ ...inputValues, [event.target.name]: value });
+    const { name, value } = event.target;
+    setInputValues({ ...inputValues, [name]: value });
   };
 
   const { id, pw } = inputValues;

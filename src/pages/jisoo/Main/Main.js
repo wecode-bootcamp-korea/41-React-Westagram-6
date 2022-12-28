@@ -1,5 +1,5 @@
 import React from 'react';
-import Nav from './components/nav/nav';
+import Nav from './../../../components/Nav/Nav';
 import Feeds from './components/feeds/feeds';
 import MainRight from './components/mainRight/mainRight';
 import './Main.scss';
