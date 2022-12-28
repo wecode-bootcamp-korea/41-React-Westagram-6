@@ -8,14 +8,9 @@ function LoginJisoo() {
     pw: '',
   });
 
-  const handleId = event => {
-    const value = event.target.value;
-    setInputValues({ ...inputValues, id: value });
-  };
-
-  const handlePw = event => {
+  const handleValue = event => {
     const { value } = event.target;
-    setInputValues({ ...inputValues, pw: value });
+    setInputValues({ ...inputValues, [event.target.name]: value });
   };
 
   const { id, pw } = inputValues;
@@ -39,13 +34,15 @@ function LoginJisoo() {
             type="text"
             id="id_input"
             placeholder="전화번호, 사용자 이름 또는 이메일"
-            onChange={handleId}
+            name="id"
+            onChange={handleValue}
           />
           <input
             type="password"
             id="pw_input"
+            name="pw"
             placeholder="비밀번호"
-            onChange={handlePw}
+            onChange={handleValue}
           />
           <button
             className="login_btn"
