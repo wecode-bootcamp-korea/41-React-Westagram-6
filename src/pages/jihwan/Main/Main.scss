@@ -1,50 +1,6 @@
 @import url(https://fonts.googleapis.com/css2?family=Lobster&display=swap);
 
 .main {
-  .nav {
-    border-bottom: 1px solid #e8e8e8;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-
-    .westaWrap {
-      .westaLogo {
-        width: 25px;
-      }
-
-      .westaLine {
-        width: 30px;
-      }
-
-      .logo {
-        font-family: 'Lobster', cursive;
-        font-size: 30px;
-      }
-    }
-
-    .inputSearch {
-      height: 20px;
-      text-align: center;
-    }
-
-    .navImgWrap {
-      .explore {
-        width: 30px;
-        margin-right: 20px;
-      }
-
-      .heart {
-        width: 30px;
-        margin-right: 20px;
-      }
-
-      .profile {
-        width: 30px;
-      }
-    }
-  }
-
   .mainContainer {
     display: flex;
     height: 500px;

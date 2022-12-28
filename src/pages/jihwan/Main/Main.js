@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Comment from './Comment';
 import './Main.scss';
+import Nav from '../../../components/Nav';
+import '../../../components/Nav.scss';
 
 const Main = () => {
   return (
-    <section className="main">
-      <nav className="nav">
+    <>
+      <Nav />
+      <section className="main">
+        {/* <nav className="nav">
         <div className="westaWrap">
           <img
             className="westaLogo"
@@ -39,10 +43,39 @@ const Main = () => {
             alt="profile"
           />
         </div>
-      </nav>
-      <main className="mainContainer">
-        <div className="feed">
-          <div className="article">
+      </nav> */}
+        <main className="mainContainer">
+          <div className="feed">
+            <div className="article">
+              <div className="user">
+                <img
+                  className="userImg"
+                  src="/images/jihwan/a.png"
+                  alt="이미지"
+                />
+                <div className="infoBox">
+                  <span className="title">wecode_bootcamp</span>
+                  <span className="subTitle">weCode - 위코드</span>
+                </div>
+                <div>
+                  <img
+                    className="dotImg"
+                    src="/images/jihwan/dot.png"
+                    alt="dot"
+                  />
+                </div>
+              </div>
+              <div className="feedContainer">
+                <img
+                  className="feedImg"
+                  src="images/jihwan/feedImg.png"
+                  alt="feedImg"
+                />
+                <Comment />
+              </div>
+            </div>
+          </div>
+          <div className="mainRight">
             <div className="user">
               <img
                 className="userImg"
@@ -53,43 +86,19 @@ const Main = () => {
                 <span className="title">wecode_bootcamp</span>
                 <span className="subTitle">weCode - 위코드</span>
               </div>
-              <div>
-                <img
-                  className="dotImg"
-                  src="/images/jihwan/dot.png"
-                  alt="dot"
-                />
+            </div>
+            <div className="storyWrap">
+              <div className="storySpan">
+                <span className="story">스토리</span>
+                <span className="viewAll">모두 보기</span>
               </div>
             </div>
-            <div className="feedContainer">
-              <img
-                className="feedImg"
-                src="images/jihwan/feedImg.png"
-                alt="feedImg"
-              />
-              <Comment />
-            </div>
+            <div>3</div>
+            <div>4</div>
           </div>
-        </div>
-        <div className="mainRight">
-          <div className="user">
-            <img className="userImg" src="/images/jihwan/a.png" alt="이미지" />
-            <div className="infoBox">
-              <span className="title">wecode_bootcamp</span>
-              <span className="subTitle">weCode - 위코드</span>
-            </div>
-          </div>
-          <div className="storyWrap">
-            <div className="storySpan">
-              <span className="story">스토리</span>
-              <span className="viewAll">모두 보기</span>
-            </div>
-          </div>
-          <div>3</div>
-          <div>4</div>
-        </div>
-      </main>
-    </section>
+        </main>
+      </section>
+    </>
   );
 };
 

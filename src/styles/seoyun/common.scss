@@ -1,0 +1,47 @@
+@mixin flexCenter {
+  * {
+    box-sizing: border-box;
+  }
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexAlignCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin flex($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin border1px($color, $radius) {
+  border: 1px solid;
+  border-color: $color;
+  border-radius: $radius;
+}
+
+@mixin widthHeight($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin fontStyle($fontsize, $fontColor, $margin) {
+  font-size: $fontsize;
+  color: $fontColor;
+  margin: $margin;
+}
+
+@mixin transparent {
+  background-color: transparent;
+  border: none;
+}
+
+@mixin buttonPointer {
+  cursor: pointer;
+}

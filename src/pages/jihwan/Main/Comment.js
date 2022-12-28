@@ -22,11 +22,11 @@ const Comment = () => {
     return setCommentMsg('');
   };
 
-  let activeSubmit = () => {
+  const activeSubmit = () => {
     if (commentMsg === '') return true;
   };
 
-  let registerBtnOn = activeSubmit() ? 'registerBtn' : 'registerBtnActive';
+  const registerBtnOn = activeSubmit() ? 'registerBtn' : 'registerBtnActive';
 
   return (
     <div className="feedWrap">
@@ -64,11 +64,9 @@ const Comment = () => {
         </span>
 
         {commentData.map(i => {
-          return (
-            <p key={Math.random()}>
-              {i.name} {i.comment}
-            </p>
-          );
+          <p key={Math.random()}>
+            {i.name} {i.comment}
+          </p>;
         })}
         <Comments comments={comments} />
         <form className="comment" onSubmit={handleCommentSubmit}>
