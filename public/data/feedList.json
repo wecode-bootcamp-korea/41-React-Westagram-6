@@ -1,0 +1,15 @@
+[
+  {
+    "id": 1,
+    "image": "images/cheolho/feed_img.jpg",
+    "user_id": "아이디1",
+    "comment_contents": "안녕하세요1"
+  },
+
+  {
+    "id": 2,
+    "image": "images/cheolho/feed_img2.jpg",
+    "user_id": "아이디2",
+    "comment_contents": "안녕하세요2"
+  }
+]
