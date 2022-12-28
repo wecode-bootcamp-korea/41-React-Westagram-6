@@ -1,0 +1,104 @@
+@import './../../../../../styles/mixin_jisoo.scss';
+
+.feeds_wrapper {
+  width: 40%;
+  margin-right: 10px;
+  padding: 5px 0;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid $basic-color;
+  border-radius: 10px;
+
+  .user_Info,
+  .count_user {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+  }
+
+  .profile_img {
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+    border-radius: 100%;
+  }
+
+  .feeds_img {
+    width: 100%;
+  }
+
+  .icon_section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    padding-left: 10px;
+
+    img {
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+    }
+  }
+
+  .like_img {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    border-radius: 100%;
+  }
+
+  .user_content,
+  .comment {
+    margin-top: 5px;
+    margin-left: 10px;
+  }
+
+  .comment_content {
+    margin-left: 5px;
+  }
+
+  .comment_input {
+    width: 85%;
+    margin: 10px 10px;
+    padding: 0 5px;
+    border: none;
+  }
+
+  .comment_register_section {
+    position: relative;
+    margin-top: 15px;
+    border-top: 1px solid $basic-color;
+  }
+
+  .comment_btn_register {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: white;
+    border: none;
+    color: rgb(7, 24, 255);
+    cursor: pointer;
+
+    &:disabled {
+      opacity: 0.6;
+    }
+  }
+
+  .delete {
+    position: relative;
+    left: 10px;
+    background-color: white;
+    border: none;
+    color: rgb(175, 175, 175);
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 1343px) {
+  .feeds_wrapper {
+    width: 50%;
+  }
+}
+
+.user_name {
+  font-weight: bold;
+}

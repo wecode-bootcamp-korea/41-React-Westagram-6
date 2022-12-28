@@ -1,0 +1,175 @@
+@import './../../../../../styles/mixin_jisoo.scss';
+
+.main_right_wrapper {
+  width: 20%;
+  margin-left: 0;
+  padding: 20px 0 10px 0;
+  background-color: rgb(250, 250, 250);
+
+  .my_profile {
+    display: flex;
+    align-items: center;
+
+    .profile_img {
+      width: 60px;
+      height: 60px;
+      margin-right: 10px;
+      border-radius: 100%;
+    }
+  }
+
+  .my_name_under {
+    font-size: 12px;
+    color: lightgray;
+  }
+
+  .story_section {
+    margin: 20px 0;
+    background-color: white;
+    border: 1px solid $basic-color;
+
+    .story_nav {
+      display: flex;
+      justify-content: space-between;
+      width: 95%;
+      margin: 10px;
+      padding: 0 10px;
+      background-color: white;
+    }
+
+    .category {
+      color: gray;
+    }
+
+    .view_all {
+      font-size: 14px;
+      font-weight: bold;
+    }
+  }
+
+  .story_user_list {
+    height: 180px;
+    overflow: scroll;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .user_profile_rectangle {
+      position: relative;
+      width: 46px;
+      height: 46px;
+      margin-right: 10px;
+      margin-bottom: 5px;
+      background: linear-gradient(to top right, yellow, pink);
+      border-radius: 100%;
+    }
+
+    .story_profile_img {
+      position: absolute;
+      left: 3px;
+      top: 3px;
+      width: 40px;
+      height: 40px;
+      border-radius: 100%;
+    }
+
+    .user_info {
+      display: flex;
+      margin-left: 10px;
+    }
+
+    .user_name_section {
+      @include flexBundle(center, left);
+      flex-direction: column;
+    }
+
+    .user_last_visit {
+      font-size: 12px;
+      color: gray;
+    }
+  }
+
+  .follow_user_info {
+    @include flexBundle(space-between, center);
+    padding-left: 10px;
+  }
+
+  .user_follow_row {
+    padding-top: 5px;
+  }
+
+  .follow_section {
+    margin: 20px 0;
+    background-color: white;
+    border: 1px solid $basic-color;
+  }
+
+  .follow_section {
+    margin-bottom: 20px;
+    padding: 5px;
+    background-color: white;
+    border: 1px solid $basic-color;
+  }
+
+  .follow_nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 5px 10px 0px;
+    padding: 0 10px;
+  }
+
+  .follow_profile_img {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+  }
+
+  .user_follow_name_section {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 0 15px;
+  }
+
+  .user_follow {
+    color: gray;
+    font-size: 14px;
+  }
+
+  .user_follow_btn {
+    color: blue;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+.aisde_list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style: none;
+  font-size: 11px;
+  color: gray;
+
+  li {
+    margin-top: 10px;
+    margin-right: 5px;
+  }
+}
+
+.aside_instagram {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 11px;
+  color: gray;
+}
+
+@media screen and (max-width: 1343px) {
+  .main_right_wrapper {
+    display: none;
+  }
+}

@@ -1,0 +1,7 @@
+$basic-color: rgb(230, 230, 230);
+
+@mixin flexBundle($justifyContent, $alignItems) {
+  display: flex;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+}
