@@ -1,0 +1,55 @@
+@import './src/styles/seoyun/common.scss';
+@import './src/styles/seoyun/variables.scss';
+
+.navContainer {
+  @include widthHeight(100%, 80px);
+  @include flex(space-evenly, center);
+  border-top: 1.5px solid black;
+  border-bottom: 1px solid #eaeaea;
+  background-color: #ffffff;
+  //position: fixed;
+  right: 0px;
+
+  .logo {
+    @include flex(null, center);
+    height: 35px;
+
+    .instagram {
+      @include fontStyle(30px, null, 0px 15px);
+    }
+
+    .header {
+      @include flex(null, center);
+      font-family: 'Lobster', cursive;
+      font-family: 'Lobster Two', cursive;
+      font-size: 25px;
+      border-left: 2px solid black;
+      padding-left: 15px;
+      height: 28px;
+    }
+  }
+
+  .searchUsers {
+    @include widthHeight(200px, 25px);
+    @include border1px(#dbdbdb, 3px);
+    background-color: #fafafa;
+    text-align: center;
+  }
+
+  .userOptions {
+    @include flex(space-evenly, null);
+    width: 180px;
+
+    .compass {
+      font-size: 22px;
+    }
+
+    .heart {
+      @include fontStyle(22px, black, null);
+    }
+
+    .user {
+      font-size: 22px;
+    }
+  }
+}
