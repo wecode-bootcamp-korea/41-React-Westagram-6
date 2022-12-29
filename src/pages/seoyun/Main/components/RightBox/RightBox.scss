@@ -1,0 +1,173 @@
+@import './src/styles/seoyun/common.scss';
+@import './src/styles/seoyun/variables.scss';
+
+.rightContainer {
+  @include widthHeight(350px, 500px);
+  margin-top: 110px;
+  margin-left: 30px;
+  background-color: none;
+
+  .myProfileBox {
+    @include flex(null, center);
+    height: 66px;
+    margin-left: 5px;
+
+    img {
+      @include widthHeight(56px, 56px);
+      border-radius: 50%;
+    }
+
+    .myBox {
+      margin-left: 15px;
+
+      .myId {
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 1px;
+      }
+
+      .explanation {
+        @include fontStyle(13px, #8e8e8e, null);
+      }
+    }
+  }
+
+  .storyBox {
+    @include border1px($borderColor, 3px);
+    height: 260px;
+    background-color: white;
+    margin-top: 20px;
+
+    .storyTitle {
+      @include flex(space-between, null);
+      @include fontStyle(13px, null, 15px);
+
+      .story {
+        color: #999999;
+      }
+
+      .showMeAll {
+        color: #999999;
+      }
+    }
+
+    .otherUsers {
+      .user1 {
+        @include flex(null, center);
+        margin-top: 20px;
+
+        img {
+          @include widthHeight(33px, 33px);
+          @include border1px($borderColor, 50%);
+          margin-left: 15px;
+        }
+
+        .userInfo {
+          margin-left: 18px;
+
+          .userId {
+            @include fontStyle(13px, null, 0px 0px 3px 0px);
+            font-weight: bold;
+          }
+
+          .storyUploadTime {
+            @include fontStyle(12px, #999999, null);
+          }
+        }
+      }
+
+      .user2 {
+        @include flex(null, center);
+        margin-top: 20px;
+
+        img {
+          @include widthHeight(33px, 33px);
+          @include border1px($borderColor, 50%);
+          margin-left: 15px;
+        }
+
+        .userInfo {
+          margin-left: 18px;
+
+          .userId {
+            @include fontStyle(13px, null, 0px 0px 3px 0px);
+            font-weight: bold;
+          }
+
+          .storyUploadTime {
+            @include fontStyle(12px, #999999, null);
+          }
+        }
+      }
+    }
+  }
+
+  .recommendationBox {
+    @include border1px($borderColor, 3px);
+    height: 160px;
+    background-color: white;
+    margin-top: 20px;
+    position: relative;
+
+    .recommendationTitle {
+      @include flex(space-between, null);
+      @include fontStyle(14px, null, 15px);
+
+      .recommend {
+        @include fontStyle(13px, #999999, null);
+      }
+
+      .showMeAll {
+        @include fontStyle(13px, #999999, null);
+      }
+    }
+
+    .youMightKnowThem {
+      .user2 {
+        @include flex(null, center);
+        margin-top: 20px;
+
+        img {
+          @include widthHeight(33px, 33px);
+          @include border1px($borderColor, 50%);
+          margin-left: 15px;
+        }
+
+        .userInfo {
+          margin-left: 18px;
+
+          .userId {
+            @include fontStyle(13px, null, 0px 0px 3px 0px);
+            font-weight: bold;
+          }
+
+          .commonFriends {
+            @include fontStyle(12px, #999999, null);
+          }
+        }
+
+        .follow {
+          @include fontStyle(13px, #0095f6, null);
+          position: absolute;
+          right: 30px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .info {
+    @include fontStyle(12.5px, #c7c7c7, 15px 0px 0px 5px);
+    line-height: 17px;
+
+    .infoline {
+      &::after {
+        content: '∙';
+      }
+
+      &:nth-last-of-type(1)::after {
+        content: none;
+      }
+    }
+  }
+}

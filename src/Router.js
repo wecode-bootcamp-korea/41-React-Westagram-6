@@ -16,6 +16,7 @@ import MainJisoo from './pages/jisoo/Main/Main';
 // 서윤의 컴포넌트
 import LoginSeoyun from './pages/seoyun/Login/Login';
 import MainSeoyun from './pages/seoyun/Main/Main';
+import SignupSeoyun from './pages/seoyun/Signup/Signup';
 
 const Router = () => {
   return (
@@ -29,6 +30,7 @@ const Router = () => {
         <Route path="/main-jisoo" element={<MainJisoo />} />
         <Route path="/login-seoyun" element={<LoginSeoyun />} />
         <Route path="/main-seoyun" element={<MainSeoyun />} />
+        <Route path="/signup-seoyun" element={<SignupSeoyun />} />
       </Routes>
     </BrowserRouter>
   );
