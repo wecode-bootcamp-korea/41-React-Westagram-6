@@ -5,7 +5,7 @@ import { faXmark, faHeart } from '@fortawesome/free-solid-svg-icons';
 
 import './CommentBox.scss';
 
-function CommentBox({ key, comment, commentObj, setCommentObj }) {
+function CommentBox({ comment, onDelete }) {
   // const { comment } = props;
 
   let [smallHeart, setSmallHeart] = useState(false);
@@ -34,7 +34,7 @@ function CommentBox({ key, comment, commentObj, setCommentObj }) {
   // };
 
   return (
-    <div className="comment" key={key}>
+    <div className="comment">
       <div className="commentLineLeft">
         <span className="commentId">{comment.username}</span>
         <span className="commentContent">{comment.content}</span>
@@ -45,14 +45,7 @@ function CommentBox({ key, comment, commentObj, setCommentObj }) {
           className={'smallHeart' + smallRedHeart}
           onClick={pressCommentHeart}
         />
-        <button
-          className="xmarkButton"
-          onClick={() => {
-            let copy = [...commentObj];
-            copy.splice({ key }, 1);
-            setCommentObj(copy);
-          }}
-        >
+        <button className="xmarkButton" onClick={() => onDelete(comment.id)}>
           <FontAwesomeIcon icon={faXmark} className="xmark" />
         </button>
       </div>

@@ -1,6 +1,6 @@
-import './Login.scss';
-import { useNavigate } from 'react-router-dom';
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import './Login.scss';
 
 function Login() {
   const navigate = useNavigate();
@@ -51,6 +51,26 @@ function Login() {
         >
           로그인
         </button>
+        {/* <button
+          className={'loginBtn' + giveClass}
+          onClick={() => {
+            fetch('http://10.58.52.180:3000/signin', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json;charset=utf-8' },
+              body: JSON.stringify({
+                email: idValue,
+                password: pwValue,
+              }),
+            })
+              .then(response => response.json())
+              .then(data => {
+                console.log(data);
+                localStorage.setItem('token', data.accessToken);
+              });
+          }}
+        >
+          Sign In
+        </button> */}
         <div className="findPW">
           <p>비밀번호를 잊으셨나요?</p>
         </div>

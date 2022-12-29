@@ -1,6 +1,6 @@
 import React from 'react';
 import Nav from '../../../components/Nav/Nav';
-import FeedBox from './components/FeedBox/FeedBox';
+import FeedBoxContinue from './components/FeedBox/FeedBox';
 import RightBox from './components/RightBox/RightBox';
 import './Main.scss';
 
@@ -9,7 +9,7 @@ function Main() {
     <>
       <Nav />
       <div className="mainWrapper">
-        <FeedBox />
+        <FeedBoxContinue />
         <RightBox />
       </div>
     </>

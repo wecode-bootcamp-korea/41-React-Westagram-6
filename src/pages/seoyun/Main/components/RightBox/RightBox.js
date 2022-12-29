@@ -99,7 +99,11 @@ function RightBox() {
         </div>
         <p className="info">
           {INFO_LIST.map(infoList => {
-            return <span key={infoList.id}>{infoList.title}&nbsp;∙</span>;
+            return (
+              <span className="infoline" key={infoList.id}>
+                {infoList.title}
+              </span>
+            );
           })}
           <br />
           <br />@ 2022 INSTAGRAM FROM META

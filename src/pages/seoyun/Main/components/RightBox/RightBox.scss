@@ -159,5 +159,15 @@
   .info {
     @include fontStyle(12.5px, #c7c7c7, 15px 0px 0px 5px);
     line-height: 17px;
+
+    .infoline {
+      &::after {
+        content: '∙';
+      }
+
+      &:nth-last-of-type(1)::after {
+        content: none;
+      }
+    }
   }
 }

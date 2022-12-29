@@ -12,10 +12,6 @@ main {
     background-color: white;
     margin-top: 20px;
 
-    &:first-child {
-      margin-top: 110px;
-    }
-
     .profileBox {
       width: 470px;
       height: 53px;
@@ -64,6 +60,9 @@ main {
 
       .likeHeart {
         @include fontStyle(24px, black, 13px 0px 0px 13px);
+        &:hover {
+          @include buttonPointer;
+        }
 
         &.Activate {
           @include fontStyle(24px, #ed4956, 13px 0px 0px 13px);
@@ -177,5 +176,14 @@ main {
         @include buttonPointer;
       }
     }
+  }
+}
+
+.feedBoxes {
+  display: flex;
+  flex-direction: column;
+
+  &:first-child {
+    margin-top: 110px;
   }
 }
