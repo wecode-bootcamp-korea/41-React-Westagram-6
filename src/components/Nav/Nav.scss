@@ -9,6 +9,7 @@
   background-color: #ffffff;
   position: fixed;
   right: 0px;
+  z-index: 1;
 
   .logo {
     @include flex(null, center);

@@ -1,4 +1,5 @@
 import React from 'react';
+import { INFO_LIST } from '../AsideBottom/AsideBottom';
 // import { compileStringAsync } from 'sass';
 import './RightBox.scss';
 
@@ -97,9 +98,9 @@ function RightBox() {
           </div>
         </div>
         <p className="info">
-          소개&nbsp;∙&nbsp;도움말&nbsp;∙&nbsp;홍보&nbsp;센터&nbsp;∙&nbsp;API&nbsp;∙&nbsp;채용&nbsp;정보&nbsp;∙&nbsp;개인정보처리방침&nbsp;∙
-          <br />
-          약관&nbsp;∙&nbsp;위치&nbsp;∙&nbsp;언어
+          {INFO_LIST.map(infoList => {
+            return <span key={infoList.id}>{infoList.title}&nbsp;∙</span>;
+          })}
           <br />
           <br />@ 2022 INSTAGRAM FROM META
         </p>
