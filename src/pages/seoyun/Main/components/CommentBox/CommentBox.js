@@ -16,23 +16,6 @@ function CommentBox({ comment, onDelete }) {
 
   const smallRedHeart = smallHeart ? ' Activate' : ' Deactivate';
 
-  // let [commentObj, setCommentObj] = useState([
-  //   {
-  //     username: 'phdjay',
-  //     content: 'beautiful work',
-  //   },
-  //   {
-  //     username: 'ch.w.ch',
-  //     content: 'wow',
-  //   },
-  // ]);
-
-  // const deleteComment = () => {
-  //   let copy = [...commentObj];
-  //   copy.splice(comment, 1);
-  //   setCommentObj(copy);
-  // };
-
   return (
     <div className="comment">
       <div className="commentLineLeft">

@@ -6,7 +6,6 @@ import './FeedBox.scss';
 import {
   faArrowUpFromBracket,
   faEllipsis,
-  // faXmark,
   faHeart,
 } from '@fortawesome/free-solid-svg-icons';
 import CommentBox from '../CommentBox/CommentBox';
@@ -22,8 +21,6 @@ function FeedBox({
 }) {
   let [countLike, setPlusLike] = useState(likeNumber);
   let [likeHeart, setLikeHeart] = useState(false);
-
-  // let [smallHeart, setSmallHeart] = useState(false);
 
   let [commentObj, setCommentObj] = useState([
     {
@@ -57,14 +54,6 @@ function FeedBox({
 
   const redHeart = likeHeart ? ' Activate' : ' Deactivate';
   // const smallRedHeart = smallHeart ? ' Activate' : ' Deactivate';
-
-  // const [mockData, setMockData] = useState([]);
-
-  // useEffect(() => {
-  //   fetch('/data/mock.json')
-  //     .then(response => response.json())
-  //     .then(result => setMockData(result));
-  // });
 
   return (
     <main>
@@ -112,43 +101,18 @@ function FeedBox({
               <CommentBox
                 key={a.id}
                 comment={a}
-                onDelete={id => {
+                onDelete={() => {
                   // console.dir(id);
                   let copy = [...commentObj];
                   copy.splice(i, 1);
                   setCommentObj(copy);
                 }}
-                // key 는 map 이랑 짝꿍이라서 여기에 있어야 해 / key는 react에서 가져가는 거라서 의미 없음 / props 로 못 넘겨
-                // 다른 변수들은 comment 박스에서 관리해
-                // 삭제하는 함수는 모든 배열을 알아야 하는데 코멘트 박스는 한줄인데 다 아는 게 이상함
-                // 삭제하는 함수는 모든 코멘트 (배열)를 아는 여기서 관리하고 함수 이름만 넘겨줘
+                // key 는 map 이랑 짝꿍이라서 여기에 있어야 해 / key 는 react 에서 가져가는 거라서 의미 없음 / props 로 못 넘김
+                // 다른 변수들은 CommentBox Component 에서 관리하기 (comment 부분이니까)
+                // 삭제하는 함수(onDelete) 는 Comment 데이터가 저장되어있는 모든 배열을 알아야 하는데 CommentBox Component 는 단 한 줄! 모든 데이터를 다 아는 게 이상해야 함
+                // 따라서 onDelete 는 commentObj 를 아는 현재 Component 에서 관리하고 함수 이름만 CommentBox 에 넘겨주기
               />
             );
-            // return (
-            //   <div className="comment" key={i}>
-            //     <div className="commentLineLeft">
-            //       <span className="commentId">{a.username}</span>
-            //       <span className="commentContent">{a.content}</span>
-            //     </div>
-            //     <div className="commentLineRight">
-            //       <FontAwesomeIcon
-            //         icon={faHeart}
-            //         className={'smallHeart' + smallRedHeart}
-            //         onClick={pressCommentHeart}
-            //       />
-            //       <button
-            //         className="xmarkButton"
-            //         onClick={() => {
-            //           let copy = [...commentObj];
-            //           copy.splice(i, 1);
-            //           setCommentObj(copy);
-            //         }}
-            //       >
-            //         <FontAwesomeIcon icon={faXmark} className="xmark" />
-            //       </button>
-            //     </div>
-            //   </div>
-            // );
           })}
         </div>
         <div className="postUploadTime">2시간 전</div>
