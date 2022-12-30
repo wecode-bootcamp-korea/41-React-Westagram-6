@@ -5,7 +5,6 @@ import FeedList from './components/FeedList';
 import { ASIDE_UI } from './components/AsideUi';
 import Nav from '../../../components/Nav';
 
-//jsx
 const Main = () => {
   const [feedList, setFeedList] = useState([]);
 
@@ -17,23 +16,10 @@ const Main = () => {
 
   return (
     <div className="Main">
-      <meta charSet="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
-      <title>westargram</title>
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
-      />
-
       <div className="wrap">
-        {/* header */}
         <Nav />
-        {/* //header */}
-        {/* main */}
         <div className="main">
           <div className="container">
-            {/*left */}
             <div>
               {feedList.map(feed => {
                 return (
@@ -45,9 +31,7 @@ const Main = () => {
                 );
               })}
             </div>
-            {/* rigth */}
             <div className="contents_right">
-              {/* aside */}
               <aside className="aside">
                 <div className="feed_profile aside_profile">
                   <div className="profile">
@@ -187,8 +171,6 @@ const Main = () => {
                   </div>
                 </div>
               </aside>
-              {/* //aside */}
-              {/* footer */}
               <footer className="footer">
                 {
                   <ul>
@@ -198,12 +180,9 @@ const Main = () => {
                   </ul>
                 }
               </footer>
-              {/* //footer */}
             </div>
-            {/* // rigth */}
           </div>
         </div>
-        {/* //main */}
       </div>
     </div>
   );

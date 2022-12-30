@@ -125,7 +125,6 @@ const FeedList = props => {
                   </div>
                 </div>
               </div>
-              {/* comment form */}
               <form className="comments_form" onSubmit={onSubmit}>
                 <div className="input_box">
                   <ReceiveComment
@@ -146,7 +145,6 @@ const FeedList = props => {
                   </button>
                 </div>
               </form>
-              {/* //comment form */}
             </li>
           </ul>
         </div>

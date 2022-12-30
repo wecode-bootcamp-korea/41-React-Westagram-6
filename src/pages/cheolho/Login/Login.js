@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
-import { scryRenderedComponentsWithType } from 'react-dom/test-utils';
-import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import '../../../styles/seoyun/common.scss';
 import '../../../styles/seoyun/reset.scss';
 import './Login.scss';
 
-//jsx
 const Login = () => {
   const navigate = useNavigate();
   const [id, setId] = useState('');
@@ -27,18 +24,9 @@ const Login = () => {
 
   return (
     <div className="Login">
-      <meta charSet="UTF-8" />
-      <meta
-        name="viewport"
-        content="width=device-width, initial
-            -scale=1.0"
-      />
-      <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
-      <title>Document</title>
       <div className="wrap">
         <div className="container">
           <div className="inner">
-            {/* header */}
             <header className="header">
               <h1>
                 <span className="header_tit">로고</span>
@@ -47,9 +35,6 @@ const Login = () => {
                 </a>
               </h1>
             </header>
-            {/* //header */}
-
-            {/* form */}
             <form className="form">
               <div className="input_box">
                 <input
@@ -80,7 +65,6 @@ const Login = () => {
                 </button>
               </div>
             </form>
-            {/* //form */}
             <div className="password_forget">
               <a href className="page_move">
                 <span>비밀번호를 잊으셨나요?</span>
